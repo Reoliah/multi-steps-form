@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: local("Ubuntu"), url("../src/assets/fonts/Ubuntu-Bold.ttf"),
+    format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: local("Ubuntu"), url("../src/assets/fonts/Ubuntu-Medium.ttf"),
+    format("truetype");
+  font-weight: medium;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: local("Ubuntu"), url("../src/assets/fonts/Ubuntu-Regular.ttf"),
+    format("truetype");
+  font-weight: normal;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.radio input:checked ~ label {
+  border-color: hsl(213, 96%, 18%);
+  background-color: hsl(231, 100%, 99%);
+}
+
+/* checkbox for Add-on page */
+.inputCard:has(input:checked) {
+  border: 2px solid hsl(243, 100%, 62%);
+  background-color: hsl(231, 100%, 99%);
+}
+
+input:checked {
+  accent-color: hsl(243, 100%, 62%);
+}
+
+.input.success input {
+  border-color: #09c372;
+}
+.error:active ~ input {
+  border-color: #ff3860;
+}
+.error {
+  color: #ff3860;
+  font-size: 14px;
+  text-align: right;
+}
+
+.aside a.active div .span {
+  background-color: hsl(206, 94%, 87%);
+  border-color: hsl(206, 94%, 87%);
+  color: black;
+}
